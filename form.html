@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <title>Bootstrap Example</title>
@@ -12,6 +12,7 @@
     <body>
     <div class="container">
         <h1>Hello Bootstrap form!</h1>
+        <p>basic form</p>
         <form role="form">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -19,7 +20,7 @@
             </div>
 
             <div class="form-group">
-                <label for="inputfile>File input"</label>
+                <label for="inputfile">File input</label>
                 <input type="file" id="inputfile">
                 <p class="help-block">This is block level sample.</p>
             </div>
@@ -27,7 +28,59 @@
             <div class="checkbox">
                 <label><input type="checkbox">Please check</label>
             </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+
+        <hr>
+        <p>inline form</p>
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Plese input name">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="inputfile">File input</label>
+                <input type="file" id="inputfile">
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox">Please check</label>
+            </div>
             <button type="submit" class="btn btn-default">submit</button>
+        </form>
+
+        <hr>
+        <p>horizontal form</p>
+        <form class="form-horizontal" role="form">
+            <div class="form-group has-warning">
+                <label for="firstname" class="col-sm-2 control-label">名字</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstname" placeholder="please input first name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname" class="col-sm-2 control-label">姓</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="secondname" placeholder="please input second name" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">请记住我
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">登录</button>
+                </div>
+            </div>
         </form>
     </div>
     </body>
