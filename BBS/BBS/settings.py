@@ -15,6 +15,7 @@ PROJECT_PATH = os.path.join(SETTING_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
+TEMPLATE_PATH_APP = os.path.join(TEMPLATE_PATH, 'bbs')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
 
 DB_PATH = os.path.join(PROJECT_PATH, 'bbs.db')
@@ -124,6 +125,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     TEMPLATE_PATH,
+    TEMPLATE_PATH_APP,
 )
 
 INSTALLED_APPS = (
