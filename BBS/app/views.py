@@ -11,4 +11,5 @@ def index(request):
 
 def page(request, bbs_id):
     bbs = models.BBS.objects.get(id=bbs_id)
-    return render_to_response('page.html', {'bbs_obj' : bbs})
+    comments = models.Comment.objects.filter(bbs_id=bbs_id)
+    return render_to_response('page.html', {'bbs_obj' : bbs, 'comments' : comments})

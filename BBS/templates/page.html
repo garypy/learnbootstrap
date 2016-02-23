@@ -6,5 +6,12 @@
     {{ bbs_obj.content }}
     <hr>
     <h3>Comments</h3>
+    {% if comments %}
+    {% for comment in comments %}
+    <strong>{{ comment.bbs_user.user.username}}</strong> says:
+        {{ comment.comment }}
+        <br>
+    {% endfor %}
+    {% endif %}
 {% endblock %}
 

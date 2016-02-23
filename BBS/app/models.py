@@ -18,13 +18,15 @@ class BBS(models.Model):
 
 class Comment(models.Model):
     comment = models.TextField()
-    user_id = models.IntegerField()
+    #user_id = models.IntegerField()
+    bbs_user = models.ForeignKey('BBS_user')
     bbs_id = models.IntegerField()
     created_at = models.DateTimeField()
 
     def __unicode__(self):
         #title = models.BBS.objects.get(id=self.bbs_id)
         return self.comment
+        #return "%s" % self.bbs_id
         #return title
 
 class Category(models.Model):
