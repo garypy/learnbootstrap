@@ -17,7 +17,15 @@ class BBS(models.Model):
         return self.title
 
 class Comment(models.Model):
-    pass
+    comment = models.TextField()
+    user_id = models.IntegerField()
+    bbs_id = models.IntegerField()
+    created_at = models.DateTimeField()
+
+    def __unicode__(self):
+        #title = models.BBS.objects.get(id=self.bbs_id)
+        return self.comment
+        #return title
 
 class Category(models.Model):
     name = models.CharField(max_length=32, unique=True)

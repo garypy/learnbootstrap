@@ -9,4 +9,5 @@ class BBS_admin(admin.ModelAdmin):
 admin.site.register(models.BBS, BBS_admin)
 admin.site.register(models.Category)
 admin.site.register(models.BBS_user)
+admin.site.register(models.Comment)
 
