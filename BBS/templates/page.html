@@ -7,10 +7,12 @@
     <hr>
     <h3>Comments</h3>
     {% if comments %}
+    <hr>
     {% for comment in comments %}
-    <strong>{{ comment.bbs_user.user.username}}</strong> says:
+    {{ comment.created_at }} <br>
+    <strong> {{ comment.bbs_user.user.username}}</strong> says:
         {{ comment.comment }}
-        <br>
+        <hr>
     {% endfor %}
     {% endif %}
 {% endblock %}
